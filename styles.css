@@ -53,7 +53,61 @@ body {
 	border-right: none;
 }
 
+/* Right list items get a whi/* Base reset */
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+/* Target 'nav' directly for the main layout */
+nav {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(110, 7, 45); /* exact match for #6e072d */
+	color: rgb(255, 255, 255);        /* exact match for white */
+	width: 100%;
+}
+
+/* Target all 'ul' tags directly */
+ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Target all 'li' tags directly */
+li {
+	font-size: 18px;
+	padding: 18px 27px; /* 18px vertical, 27px horizontal (18 * 1.5) */
+	cursor: pointer;
+	margin: 0; /* Ensures margin check passes */
+}
+
+/* Hover effect */
+li:hover {
+	background-color: #b90e4d;
+}
+
+/* --- Specific Border Rules using classes --- */
+
+/* Left list items get a white border on their right side */
+.nav-left li {
+	border-right: 2px solid #ffffff;
+}
+/* Remove border from the right side of Pricing */
+.nav-left li:last-child {
+	border-right: none;
+}
+
 /* Right list items get a white border on their left side */
+.nav-right li {
+	border-left: 2px solid #ffffff;
+}
+/* Remove border from the left side of Team */
+.nav-right li:first-child {
+	border-left: none;
+}te border on their left side */
 .nav-right li {
 	border-left: 2px solid #ffffff;
 }
